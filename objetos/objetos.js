@@ -42,7 +42,7 @@ const {
 } = anxietyDepress;
 console.log(Angry);
 
-//OBJECT METHODS 
+//OBJECT METHODS
 
 /*Los objetos pueden modificar sus valores, a pesar de que
 están definidas en una constante. Yo puedo, por medio de
@@ -62,29 +62,32 @@ console.log(Object.isFrozen(anxietyDepress));
  * Por medio del Spread operator:
   const newconst = {...anxiety,...depressive}
  */
-  
 
-  //FUNCIONES EN OBJETOS
-  //This: una forma de referirse al objeto mismo
+//FUNCIONES EN OBJETOS
+//This: una forma de referirse al objeto mismo
 
-  const diagnostic = {
-    anxiety: "moderada",
-    depression: "alta",
-    panicAttack: "moderada",
-    sleepess: "3 días máximo",
-    mostrarInfo: function(){
-        console.log(`Su diagnostico es: ${this.sleepess}`)
-    }
-  }
-  diagnostic.mostrarInfo();
+const diagnostic = {
+  anxiety: "moderada",
+  depression: "alta",
+  panicAttack: "moderada",
+  sleepess: "3 días máximo",
+  mostrarInfo: function () {
+    console.log(`Su diagnostico es: ${this.sleepess}`);
+  },
+};
+diagnostic.mostrarInfo();
 
-  //OBJECT CONSTRUCTOR
+//OBJECT CONSTRUCTOR
 
-function Diagnostic(sleep,mood,relationShip){
-    this.sleep = sleep;
-    this.mood = mood;
-    this.relationShip = relationShip;
+function Diagnostic(sleep, mood, relationShip) {
+  this.sleep = sleep;
+  this.mood = mood;
+  this.relationShip = relationShip;
 }
 
-const informe = new Diagnostic('ha mejorado', 'aceptable', 'no hay avances en ese tema');
-console.log(informe); 
+const informe = new Diagnostic(
+  "ha mejorado",
+  "aceptable",
+  "no hay avances en ese tema"
+);
+console.log(informe);
