@@ -1,4 +1,4 @@
-//conecion con los elementos de HTML
+//conexion con los elementos de HTML
 const notificarBtn = document.querySelector('#notificar');
 
 //event listener
